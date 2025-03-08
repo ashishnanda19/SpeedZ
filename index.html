@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpeedZ - Test Your Typing Speed</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <h1>SpeedZ</h1>
+            </div>
+            <nav>
+                <button id="themeToggle" class="theme-toggle">
+                    <span class="moon">🌙</span>
+                    <span class="sun">☀️</span>
+                </button>
+                <button id="resetButton" class="reset-button">↺</button>
+            </nav>
+        </header>
+
+        <main>
+            <div class="stats">
+                <div class="stat-box">
+                    <span class="stat-label">WPM</span>
+                    <span id="wpm" class="stat-value">0</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-label">Accuracy</span>
+                    <span id="accuracy" class="stat-value">0%</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-label">Time</span>
+                    <span id="time" class="stat-value">60s</span>
+                </div>
+            </div>
+
+            <div class="type-box">
+                <div id="textDisplay" class="text-display"></div>
+                <textarea id="textInput" class="text-input" spellcheck="false" placeholder="Start typing to begin..."></textarea>
+            </div>
+
+            <div class="controls">
+                <div class="control-group">
+                    <label>Time:</label>
+                    <div class="button-group">
+                        <button class="time-button" data-time="15">15s</button>
+                        <button class="time-button" data-time="30">30s</button>
+                        <button class="time-button active" data-time="60">60s</button>
+                        <button class="time-button" data-time="120">2m</button>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label>Type:</label>
+                    <div class="button-group">
+                        <button class="type-button active" data-type="words">Words</button>
+                        <button class="type-button" data-type="quotes">Quotes</button>
+                        <button class="type-button" data-type="code">Code</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <div id="resultModal" class="modal">
+            <div class="modal-content">
+                <h2>Test Complete!</h2>
+                <div class="result-stats">
+                    <div class="result-stat">
+                        <span class="label">WPM</span>
+                        <span id="finalWpm" class="value">0</span>
+                    </div>
+                    <div class="result-stat">
+                        <span class="label">Accuracy</span>
+                        <span id="finalAccuracy" class="value">0%</span>
+                    </div>
+                </div>
+                <div class="modal-buttons">
+                    <button id="retryButton">Try Again</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>© Ashish. All right reserved</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html> 
