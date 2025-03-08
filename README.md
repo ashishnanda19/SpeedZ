@@ -23,4 +23,6 @@ Just open `index.html` in your web browser - no setup required!
 
 ## Author
 
-Created by Ashish 
+Created by Ashish
+<br>
+Contributions by [Kushagra Gupta](https://github.com/kushagragupta04).
